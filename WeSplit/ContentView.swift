@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var temp = ""
+    var tempCelsius = 0.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Form{
+            TextField("Enter the temperature in Celsius:", text: $temp)
+            Text("This is the temperature in Fahrenheit: \(String((Double(temp) ?? 0) * 9/5+32))")
+        }
+        
     }
 }
 
