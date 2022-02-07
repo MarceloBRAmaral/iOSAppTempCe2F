@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         Form{
-            TextField("Enter the temperature in Celsius:", text: $temp)
+            TextField("Enter the temperature in Celsius: 0.0", text: $temp)
             Text("This is the temperature in Fahrenheit: \(String((Double(temp) ?? 0) * 9/5+32))")
         }
         
